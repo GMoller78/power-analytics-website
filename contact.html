@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Power Analytics Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon Links -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Power Analytics Solutions Logo" id="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <span>Call: 082 574 4873</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header Section -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We're here to help you power your operations. Reach out today!</p>
+            </div>
+        </section>
+
+        <!-- Contact Information & Form Section -->
+        <section id="contact-details-form" class="content-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Direct Contact</h2>
+                        <p>Feel free to reach out to us directly via phone or email. We're eager to discuss your
+                            challenges and explore how Power Analytics Solutions can empower your business.</p>
+
+                        <div class="info-item">
+
+                            <i class="bi bi-telephone-fill contact-icon-bs"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p><a href="tel:0825744873">082 574 4873</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+
+                            <i class="bi bi-envelope-fill contact-icon-bs"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p><a href="mailto:gerhard@power-platform.co.za">gerhard@power-platform.co.za</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+
+                            <i class="bi bi-person-fill contact-icon-bs"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Gerhard Moller</p>
+                            </div>
+                        </div>
+
+                        <!-- Optional: Address
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt-fill contact-icon-bs"></i> {}
+                            <div>
+                                <strong>Office Address:</strong>
+                                <p>Your Street Address<br>City, Postal Code, Country</p>
+                            </div>
+                        </div>
+                        -->
+                        <p style="margin-top: 20px;">We aim to respond to all inquiries within one business day.</p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" action="YOUR_FORM_PROCESSING_SCRIPT_URL" method="POST">
+                            <!-- Replace YOUR_FORM_PROCESSING_SCRIPT_URL with the actual URL/service that will handle the form submission -->
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name (Optional):</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional):</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject:</label>
+                                <select id="subject" name="subject">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Service Request">Service Request</option>
+                                    <option value="Solution Inquiry">Solution Inquiry</option>
+                                    <option value="Process Mapping">Interest in Process Mapping</option>
+                                    <option value="Custom Development">Interest in Custom Development</option>
+                                    <option value="Implementation">Interest in Implementation/Training</option>
+                                    <option value="Analytics/Improvement">Interest in Analytics/Improvement</option>
+                                    <option value="Partnership">Partnership Opportunity</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message:</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                            <div id="form-status"></div> <!-- For success/error messages -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional: Map Section -->
+        <!--
+        <section id="map-section" class="content-section bg-light no-padding-bottom">
+            <div class="container text-center">
+                <h2>Find Us</h2>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.484909608857!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_PLACE_ID!2sYour%20Business%20Name!5e0!3m2!1sen!2sza!4vDATE" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-slogan">
+                <p>"Whether you're managing a single site or a complex operation, empower your team to act fast, stay
+                    compliant, and maximise revenue."</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact: <a href="mailto:gerhard@power-platform.co.za">gerhard@power-platform.co.za</a> | 082 574
+                    4873</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> Power Analytics Solutions. All Rights Reserved.</p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Basic Form Handling Example (Client-Side Validation + Status Message)
+        // For actual submission, you need a backend script or service.
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Basic client-side validation (HTML5 `required` attribute handles most of this)
+                // You can add more complex JS validation here if needed
+
+                // Simulate form submission
+                formStatus.textContent = 'Sending...';
+                formStatus.style.color = 'blue';
+
+                // **IMPORTANT:** Replace this timeout with actual AJAX call to your backend
+                setTimeout(() => {
+                    // This is where you'd handle the response from your server
+                    // For now, we'll just simulate success.
+                    formStatus.textContent = 'Message sent successfully! We will get back to you soon.';
+                    formStatus.style.color = 'green';
+                    contactForm.reset(); // Clear the form
+
+                    // To simulate an error:
+                    // formStatus.textContent = 'An error occurred. Please try again.';
+                    // formStatus.style.color = 'red';
+                }, 2000);
+            });
+        }
+
+        // Pre-fill subject based on URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get('service');
+        const solutionParam = urlParams.get('solution');
+        const subjectSelect = document.getElementById('subject');
+
+        if (subjectSelect) {
+            if (serviceParam) {
+                const option = subjectSelect.querySelector(`option[value="${serviceParam}"]`) || subjectSelect.querySelector(`option[value*="${serviceParam.split('-')[0]}"]`); // try to match first word
+                if (option) option.selected = true;
+            } else if (solutionParam) {
+                const option = subjectSelect.querySelector(`option[value*="${solutionParam.split('-')[0]}"]`) || subjectSelect.querySelector(`option[value="Solution Inquiry"]`);
+                if (option) option.selected = true;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

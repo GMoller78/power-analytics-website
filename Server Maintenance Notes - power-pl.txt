@@ -1,0 +1,127 @@
+Server Maintenance Notes - power-platform.co.za Website
+=========================================================
+
+Server IP: 172.236.3.134
+Website Domain(s): power-platform.co.za, www.power-platform.co.za
+
+1. Server Access:
+-------------------
+SSH User: appuser
+Command: ssh appuser@172.236.3.134
+
+2. Key Components & Services for this Website:
+----------------------------------------------
+| Component         | Service Name(s) / Files           | App Directory / Notes                                      |
+|-------------------|-----------------------------------|------------------------------------------------------------|
+| Web Server        | nginx (systemd service)           | Serves the static website, handles HTTP/HTTPS.             |
+| Website Files     | HTML, CSS, JS, Images             | /var/www/power-platform.co.za/html/                      |
+| SSL/TLS           | Certbot / Let's Encrypt           | Certificates: /etc/letsencrypt/live/power-platform.co.za/  |
+| Firewall          | ufw (Uncomplicated Firewall)    | Manages allowed incoming ports (22, 80, 443).              |
+| Process Manager   | systemd (systemctl)               | Manages the nginx service.                               |
+| Code Repository   | Git (cloned from GitHub)          | Source: https://github.com/GMoller78/power-analytics-website.git |
+
+3. Checking System Status:
+--------------------------
+*   Check Nginx service status:
+    sudo systemctl status nginx
+    (Look for "Active: active (running)")
+
+*   Check UFW (Firewall) status:
+    sudo ufw status verbose
+    (Ensure ports 22, 80, and 443 are "ALLOW IN")
+
+*   Overall process view (optional):
+    htop
+    (Install with `sudo apt install htop` if needed. Press `q` to exit.)
+
+4. Managing Nginx (Start/Stop/Restart):
+---------------------------------------
+*   General command: sudo systemctl [action] nginx
+    Actions: start, stop, restart, reload (reload is preferred for config changes)
+
+*   Examples:
+    *   Restart Nginx:
+        sudo systemctl restart nginx
+    *   Reload Nginx:
+        sudo systemctl reload nginx
+
+*   Test Nginx configuration before reloading/restarting:
+    sudo nginx -t
+    (Look for "syntax is ok" and "test is successful")
+
+5. Viewing Logs (Troubleshooting):
+----------------------------------
+*   Nginx Access Log for this site:
+    sudo tail -n 50 /var/log/nginx/power-platform.access.log
+    sudo tail -f /var/log/nginx/power-platform.access.log
+
+*   Nginx Error Log for this site:
+    sudo tail -n 50 /var/log/nginx/power-platform.error.log
+    sudo tail -f /var/log/nginx/power-platform.error.log
+
+*   General Nginx Error Log:
+    sudo tail -n 50 /var/log/nginx/error.log
+
+*   Certbot Logs (for SSL renewal issues):
+    sudo tail -n 50 /var/log/letsencrypt/letsencrypt.log
+
+6. Updating Website Content:
+----------------------------
+1.  Make changes locally in your VS Code project.
+2.  Commit and push changes to GitHub:
+    # In your local VS Code terminal
+    git add .
+    git commit -m "Your descriptive commit message"
+    git push origin main
+
+3.  SSH into the server:
+    ssh appuser@172.236.3.134
+
+4.  Navigate to the website directory:
+    cd /var/www/power-platform.co.za/html
+
+5.  Pull the latest changes from GitHub:
+    git pull origin main
+
+7. SSL Certificate Management (Let's Encrypt / Certbot):
+--------------------------------------------------------
+*   Check certificate expiry date:
+    echo | openssl s_client -servername power-platform.co.za -connect power-platform.co.za:443 2>/dev/null | openssl x509 -noout -dates
+
+*   Test automatic renewal process (dry run):
+    sudo certbot renew --dry-run
+
+*   Force renewal (only if necessary):
+    sudo certbot renew --force-renewal
+
+8. System Maintenance (General Server):
+---------------------------------------
+*   Update package lists:
+    sudo apt update
+
+*   Apply system updates:
+    sudo apt upgrade -y
+    (Note "*** System restart required ***" message if present)
+
+*   Check disk space:
+    df -h
+
+*   Clean up unused packages (optional):
+    sudo apt autoremove -y
+
+9. Key Configuration File Locations:
+------------------------------------
+*   Nginx Site Config: /etc/nginx/sites-available/power-platform
+    (Symlinked from /etc/nginx/sites-enabled/power-platform)
+*   Main Nginx Config: /etc/nginx/nginx.conf
+*   Let's Encrypt Certificates: /etc/letsencrypt/live/power-platform.co.za/
+*   Let's Encrypt Renewal Config: /etc/letsencrypt/renewal/power-platform.co.za.conf
+*   UFW Rules: Check with `sudo ufw status verbose`.
+
+10. Important Reminders & Best Practices:
+-----------------------------------------
+*   Test Nginx Config: After Nginx config edits, always run `sudo nginx -t` before reloading/restarting.
+*   Backups: Code is in GitHub. Consider backing up /etc/nginx/ and /etc/letsencrypt/ periodically.
+*   Firewall: Ensure UFW is active and only necessary ports are open (SSH:22, HTTP:80, HTTPS:443).
+*   Monitor Logs: Regularly check Nginx error logs.
+*   System Updates: Keep the server OS and packages updated.

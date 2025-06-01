@@ -364,4 +364,423 @@ footer a:hover {
         grid-template-columns: 1fr;
         /* Stack cards on smaller screens */
     }
+
+    /* ==== ABOUT US PAGE SPECIFIC STYLES ==== */
+
+    /* Page Header */
+    .page-header {
+        background-color: #34495E;
+        /* A slightly different dark blue/grey */
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .page-header p {
+        font-size: 1.1em;
+        color: #ecf0f1;
+    }
+
+    /* Expertise Section */
+    #expertise .highlight-box {
+        background-color: #eaf2f8;
+        /* Very light blue */
+        border-left: 5px solid #D90429;
+        /* Accent color border */
+        padding: 25px;
+        margin-bottom: 40px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    #expertise .highlight-box h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        font-size: 1.6em;
+    }
+
+    .expertise-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+
+    .expertise-point {
+        padding: 20px;
+    }
+
+    .expertise-icon {
+        width: 50px;
+        /* Adjust icon size */
+        height: 50px;
+        margin-bottom: 15px;
+        opacity: 0.8;
+    }
+
+    .expertise-point h4 {
+        font-size: 1.3em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Approach Steps Section */
+    #our-approach-about .intro-paragraph {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        font-size: 1.1em;
+    }
+
+    .approach-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .step-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        position: relative;
+        border-top: 4px solid #D90429;
+        /* Accent color top border */
+    }
+
+    .step-card span {
+        /* Step number */
+        position: absolute;
+        top: -15px;
+        left: 20px;
+        background-color: #D90429;
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    .step-card h3 {
+        margin-top: 20px;
+        /* Space below number */
+        margin-bottom: 10px;
+        font-size: 1.4em;
+    }
+
+    /* Team Section (Optional) */
+    #meet-the-team .team-member {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .team-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid #ddd;
+    }
+
+    #meet-the-team .title {
+        font-style: italic;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    /* ==== SERVICES PAGE SPECIFIC STYLES ==== */
+
+    .service-item h2 {
+        text-align: left;
+        /* Override default center alignment for section titles within service items */
+        margin-bottom: 20px;
+        font-size: 2em;
+        /* Slightly smaller than main page titles */
+        color: #D90429;
+        /* Accent color for service titles */
+    }
+
+    .service-item .flex-container {
+        gap: 50px;
+        /* Increase gap for more spacing */
+    }
+
+    .service-item .flex-container.reverse {
+        /* Class to reverse flex order */
+        flex-direction: row-reverse;
+    }
+
+    .service-item .text-content ul {
+        list-style: disc;
+        /* Or '✓ ' with ::before if you prefer */
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .service-item .text-content ul li {
+        margin-bottom: 8px;
+    }
+
+    .service-item .text-content h3 {
+        /* For "Key Benefits/Aspects/Offerings" */
+        font-size: 1.3em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Specific button style for service items if needed */
+    .btn-primary-outline {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 15px;
+        border: 2px solid #D90429;
+        color: #D90429;
+        background-color: transparent;
+    }
+
+    .btn-primary-outline:hover {
+        background-color: #D90429;
+        color: #fff;
+    }
+
+
+    /* Responsive adjustments for service items */
+    @media (max-width: 768px) {
+        .service-item h2 {
+            text-align: center;
+            /* Center on smaller screens if preferred */
+        }
+
+        .service-item .flex-container,
+        .service-item .flex-container.reverse {
+            flex-direction: column;
+            /* Stack image and text */
+        }
+
+        .service-item .image-content {
+            margin-bottom: 20px;
+            /* Add space below image when stacked */
+        }
+    }
+
+    /* ==== SOLUTIONS PAGE SPECIFIC STYLES ==== */
+
+    .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        /* Adjust minmax for card width */
+        gap: 30px;
+    }
+
+    .solution-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        /* To contain image if it's larger than card */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .solution-image {
+        width: 100%;
+        height: 200px;
+        /* Adjust as needed, or use aspect-ratio */
+        object-fit: cover;
+        /* Cover the area, might crop */
+        /* object-fit: contain; */
+        /* Show whole image, might leave space */
+        border-bottom: 3px solid #D90429;
+        /* Accent color line */
+    }
+
+    .solution-content {
+        padding: 25px;
+        flex-grow: 1;
+        /* Allows content to take remaining space if cards have varying text length */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .solution-content h3 {
+        font-size: 1.6em;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .solution-tagline {
+        font-size: 0.95em;
+        color: #777;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    .solution-content p {
+        margin-bottom: 15px;
+        font-size: 0.95em;
+        flex-grow: 1;
+        /* Pushes button to bottom if text varies */
+    }
+
+    .solution-content h4 {
+        /* "Key Features & Benefits" */
+        font-size: 1.1em;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .solution-content ul {
+        list-style: disc;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+    }
+
+    .solution-content ul li {
+        margin-bottom: 5px;
+    }
+
+    .solution-content .btn-primary-outline {
+        margin-top: auto;
+        /* Pushes button to the bottom of the card */
+        align-self: flex-start;
+        /* Aligns button to the left */
+    }
+
+    /* ==== CONTACT PAGE SPECIFIC STYLES ==== */
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        /* Adjust ratio as needed */
+        gap: 40px;
+    }
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 1.8em;
+        color: #2c3e50;
+        margin-bottom: 25px;
+    }
+
+    .contact-info .info-item .contact-icon {
+        /* Make it more specific if needed */
+        width: 24px;
+        height: 24px;
+        margin-top: 3px;
+        opacity: 0.7;
+        object-fit: contain;
+        /* Ensures the image scales down within the dimensions */
+    }
+
+    .info-item strong {
+        display: block;
+        margin-bottom: 3px;
+        color: #333;
+    }
+
+    .info-item a {
+        color: #D90429;
+        text-decoration: none;
+    }
+
+    .info-item a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* Contact Form Styles */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="tel"]:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #D90429;
+        /* Accent color on focus */
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        /* Allow vertical resize, not horizontal */
+    }
+
+    .form-group button[type="submit"] {
+        padding: 12px 30px;
+        /* Make button a bit larger */
+    }
+
+    #form-status {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    /* Map Section (if used) */
+    .no-padding-bottom {
+        padding-bottom: 0 !important;
+    }
+
+    .map-container {
+        width: 100%;
+        /* No specific styling needed unless you want borders etc. */
+    }
+
+    .map-container iframe {
+        display: block;
+        /* Removes tiny space below iframe */
+    }
+
+
+    /* Responsive adjustments for contact page */
+    @media (max-width: 900px) {
+
+        /* Adjust breakpoint as needed */
+        .contact-grid {
+            grid-template-columns: 1fr;
+            /* Stack on smaller screens */
+        }
+
+        .contact-form-container {
+            margin-top: 30px;
+            /* Add some space when stacked */
+        }
+    }
 }
