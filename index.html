@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Analytics Solutions - Streamline Your Business</title>
+    <title>Power Analytics - Streamline Your Business</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.ico" sizes="any">
 </head>
 
 <body>
 
-    <header>
+    <header> <!-- SINGLE, CORRECTED HEADER -->
         <div class="container">
             <a href="index.html" class="logo-link">
                 <img src="images/logo.png" alt="Power Analytics Solutions Logo" id="logo">
             </a>
-            <nav>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger-button" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <nav id="main-nav"> <!-- ID is crucial for JS and CSS -->
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li> <!-- 'active' class for index.html -->
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="solutions.html">Solutions</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+
             <div class="header-contact">
+                <!-- For index.html & about.html -->
                 <span>email: info@power-platform.co.za</span>
+                <!-- For contact.html, services.html, solutions.html, it should be: -->
+                <!-- <span>Call: 082 574 4873</span> -->
             </div>
         </div>
     </header>
@@ -58,6 +70,7 @@
                             implementation, and continuous improvement, we're with you every step of the way.</p>
                     </div>
                     <div class="image-content">
+                        <!-- Ensure this path is correct relative to index.html -->
                         <img src="images/index/digital-transformation.jpg"
                             alt="Team collaborating on digital solutions">
                     </div>
@@ -72,28 +85,24 @@
                 <div class="services-grid">
                     <div class="service-card">
                         <img src="images/Process mapping icon.svg" alt="Process Mapping Icon" class="service-icon">
-                        <!-- Placeholder for icon -->
                         <h3>Business Process Mapping</h3>
                         <p>Understand and optimize your current workflows for maximum efficiency.</p>
                         <a href="services.html#process-mapping" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <img src="images/icon-app-dev.svg" alt="App Development Icon" class="service-icon">
-                        <!-- Placeholder for icon -->
                         <h3>Custom Application Development</h3>
                         <p>Tailored software solutions designed to meet your specific operational needs.</p>
                         <a href="services.html#custom-dev" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <img src="images/icon-data-analytics.svg" alt="Data Analytics Icon" class="service-icon">
-                        <!-- Placeholder for icon -->
                         <h3>Data Analytics & Insights</h3>
                         <p>Turn raw data into actionable intelligence for informed decision-making.</p>
                         <a href="services.html#data-analytics" class="learn-more">Learn More →</a>
                     </div>
                     <div class="service-card">
                         <img src="images/icon-ongoing-support.svg" alt="Support Icon" class="service-icon">
-                        <!-- Placeholder for icon -->
                         <h3>Ongoing Support & Improvement</h3>
                         <p>We partner with you for long-term success and continuous optimization.</p>
                         <a href="services.html#support-improvement" class="learn-more">Learn More →</a>
@@ -149,9 +158,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 

@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Solutions - Power Analytics Solutions</title>
+    <title>Power Analytics - Streamline Your Business</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon Links -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
 </head>
 
 <body>
@@ -20,17 +17,28 @@
             <a href="index.html" class="logo-link">
                 <img src="images/logo.png" alt="Power Analytics Solutions Logo" id="logo">
             </a>
-            <nav>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger-button" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li> <!-- 'active' class for current page -->
                     <li><a href="services.html">Services</a></li>
                     <li><a href="solutions.html" class="active">Solutions</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+
             <div class="header-contact">
-                <span>Call: 082 574 4873</span>
+                <!-- Correct contact info for the specific page -->
+                <span>email: info@power-platform.co.za</span>
+                <!-- OR <span>Call: 082 574 4873</span> -->
             </div>
         </div>
     </header>
@@ -63,7 +71,7 @@
 
                     <!-- Solution 1: Workforce Management -->
                     <div class="solution-card">
-                        <img src="images/solution-workforce-management.jpg" alt="Workforce Management Solution"
+                        <img src="images/solutions/HR_Dashboard.jpg" alt="Workforce Management Solution"
                             class="solution-image">
                         <div class="solution-content">
                             <h3>Streamline Your Workforce Management</h3>
@@ -87,7 +95,7 @@
 
                     <!-- Solution 2: Fleet Health & Maintenance -->
                     <div class="solution-card">
-                        <img src="images/solution-fleet-health.jpg" alt="Fleet Health & Maintenance Solution"
+                        <img src="images/solutions/pm_checklist.jpg" alt="Fleet Health & Maintenance Solution"
                             class="solution-image">
                         <div class="solution-content">
                             <h3>Take Control of Your Fleet's Health</h3>
@@ -108,7 +116,7 @@
 
                     <!-- Solution 3: Analytics Control Room -->
                     <div class="solution-card">
-                        <img src="images/solution-analytics-control-room.jpg" alt="Analytics Control Room Service"
+                        <img src="images/solutions/analytics.jpg" alt="Analytics Control Room Service"
                             class="solution-image">
                         <div class="solution-content">
                             <h3>Unlock the Power of Your Mining Data</h3>
@@ -130,7 +138,7 @@
 
                     <!-- Solution 4: Coal Face Data in Your Pocket -->
                     <div class="solution-card">
-                        <img src="images/solution-coal-face-data.jpg" alt="Coal Face Data Capture Solution"
+                        <img src="images/solutions/coalface.jpg" alt="Coal Face Data Capture Solution"
                             class="solution-image">
                         <div class="solution-content">
                             <h3>Coal Face Data in Your Pocket</h3>
@@ -184,10 +192,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 
